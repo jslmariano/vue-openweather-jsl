@@ -1,0 +1,39 @@
+{
+  "name": "vue-openweather-jsl",
+  "version": "0.2.19",
+  "author": "jslmariano",
+  "description": "A VueJS weather component using the OpenWeatherMap API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jslmariano/vue-openweather-jsl.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-openweather-jsl.umd.js",
+  "module": "./dist/vue-openweather-jsl.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-openweather-jsl.es.js",
+      "require": "./dist/vue-openweather-jsl.umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "del src\\components\\*.d.ts && vue-tsc --declaration --emitDeclarationOnly && vite build && mkdir dist\\types && move /y src\\components\\*.d.ts dist\\types\\",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@vitejs/plugin-vue": "^2.3.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.0",
+    "vue-openweather-jsl": "^0.2.10",
+    "vue-tsc": "^0.29.8"
+  }
+}

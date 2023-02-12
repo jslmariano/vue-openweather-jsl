@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+"types": [
+  "node"
+],
+  "include": ["vite.config.ts"]
+}
